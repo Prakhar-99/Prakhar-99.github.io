@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box;
+     font-family: 'Red Hat Display', sans-serif;
+     width: 100%;
+}
+@import url('https://fonts.googleapis.com/css2?family=Charis+SIL&family=Hind:wght@300&family=Red+Hat+Display:wght@300&display=swap');
+:root{
+    
+--Pale-blue: hsl(225, 100%, 94%);
+--Bright-blue: hsl(245, 75%, 52%);
+
+--Very-pale-blue: hsl(225, 100%, 98%);
+--Desaturated-blue: hsl(224, 23%, 55%);
+--Dark-blue: hsl(223, 47%, 23%);
+}
+body{
+    width: 100%;
+    position: relative;
+    background-color: var(--Pale-blue);
+}
+.svg-bg{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    padding-left: 3em;
+    z-index: -100;
+}
+
+.card-container-holder{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.order-card-container{
+    box-sizing: border-box;
+    width: 400px;
+    height: fit-content;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+    padding-bottom: 2em;
+}
+.order-img{
+    width: 100%;
+    
+}
+.order-img svg{
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+.order-info{
+    margin: 2em 0 0 0;
+    width: 100%;
+}
+.order-info h2{
+ text-align: center;
+ color: var(--Dark-blue);
+ font-weight: 900;
+}
+.order-info p{
+    font-size: 16px;
+    width: 80%;
+    text-align: center;
+    margin: 1em auto;
+    color: var(--Desaturated-blue);
+    font-weight: 500;
+}
+.order-plan{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    background: var(--Very-pale-blue);
+    width: 80%;
+    padding: 1em 0;
+    place-items: center;
+    border-radius: 10px;
+}
+.order-plan svg{
+    margin-left: 2em;
+}
+.annual-flex{
+    display: flex;
+    flex-direction: column;
+    place-self: start;
+}
+.annual-flex h4{
+    font-weight: 700;
+    color: var(--Dark-blue);
+}
+.order-plan a:hover{
+    text-decoration: none;
+    color: var(--Bright-blue);
+}
+.pay{
+    margin: 1.5em 0;
+    width: 80%;
+    text-align: center;
+    box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+}
+.payment-btn{
+  padding: 0.8em 1em;  
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  outline: none;
+  background-color: var(--Bright-blue);
+  color: var(--Very-pale-blue);
+  /* font-size: 16px; */
+  cursor: pointer;
+  font-weight: 700;
+}
+.payment-btn:hover{
+    background-color:  hsl(245, 84%, 64%);
+}
+.cancel-btn{
+    text-decoration: none;
+    color: var(--Desaturated-blue);
+    font-weight: 900;
+    text-align: center;
+}
+.cancel-btn:hover{
+    color: var(--Dark-blue);
+}
+@media screen and (max-width: 400px) {
+
+    .order-card-container{
+        width: 95%;
+
+    }
+}
